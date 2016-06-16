@@ -9,7 +9,7 @@
         "description": "Size of VMs in the VM Scale Set."
       }
     },
-    "ubuntuOSVersion": {
+    "WindowsOSVersion": {
       "type": "string",
       "defaultValue": "14.04.4-LTS",
       "allowedValues": [
@@ -89,8 +89,8 @@
     "frontEndIPConfigID": "[concat(variables('lbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
     "osType": {
       "publisher": "Canonical",
-      "offer": "UbuntuServer",
-      "sku": "[parameters('ubuntuOSVersion')]",
+      "offer": "WindowsServer",
+      "sku": "[parameters('WindowsOSVersion')]",
       "version": "latest"
     },
     "imageReference": "[variables('osType')]",
